@@ -135,8 +135,7 @@
       <div class="col-xs-12">
         <h2>Overview</h2>
         <p>
-	Computer vision algorithms are often developed inside a closed-world paradigm, for example recognizing objects from a fixed set of categories. However, our visual world is naturally open, containing situations that are dynamic, vast, and unpredictable. Algorithms developed on closed-world datasets are often brittle once exposed to the realistic complexity of the open world, where they are unable to efficiently adapt and robustly generalize. We invite researchers in perception and learning to the Workshop on Open World Vision where we will investigate, along several directions, both the challenges and opportunities for open world vision systems.
-	
+          Computer vision algorithms are often developed inside a closed-world paradigm, for example, recognizing objects from a fixed set of categories. However, the "world" is open and constantly and dynamically changes. As a result, when the “world” changes, these computer vision algorithms are unable to detect the change and then continue to perform their tasks with incorrect and sometimes misleading predictions. In this workshop, we aim to facilitate research directions that aim to operate well in the open world while maintaining performance in the “closed” world. Many real-world applications considered at WACV must deal with changing worlds where a variety of novelty is introduced (e.g., new classes of objects). 	
         </p>
       </div>
     </div>
@@ -166,21 +165,46 @@
         <p>Let's consider the following motivational examples.
         </p>
         <ul>
-          <li><b>Open-world data follows long-tail distribution</b>.
-          When should we treat heavily-tailed classes and dominant classes equally or differently? In autonomous driving, we simply group "dogs" and "racoons" into an "animal" super-class because animal types do not necessarily change motion plans for obstacle avoidance (e.g., "stop" or "slow-down"). In contrast, an elderly-assistive robot may have to recognize rarely-seen kitchenware (e.g., water cups and coffee mugs).
-	  </li>
-          <li><b>Open-world contains unknown examples</b>.
-		   Because of the nature of long-tail distributions, one typically constructs a closed-world training set by first defining an ontology (e.g., the vocabulary of semantic labels) w.r.t dominant/common classes, and then ignoring the "tail" uncommon/rare classes, many of which may not even be seen during data collection. Examples from these tail classes are unknown open-set data to a model trained on that closed-world dataset. An autonomous vehicle may not recognize a rarely-seen stroller, a recommendation system may be confronted with fake imagery that is adversarially generated. How should a model trained in the closed-world dataset respond to open-set unknown examples?
-	  </li>
-          <li><b>Open-world requires our limited ontology of labels to be evolving</b>.
-		  We take the view that ontologies (e.g., object vocabulary for driving safety and clothing styles vocabulary) evolve over time. For example, after deploying an autonomous driving system, we would like to differentiate "police-officers" and "pedestrians" (both of which are "persons"), and define a new class "vulnerable dynamic objects" to include "strollers" and "wheelchairs". In a product-oriented vision system, we would like to keep expanding fashion vocabulary as clothing and styles are dynamically changing over time. Given these, how should we train our model with continually-updated ontologies? Should we practice continual learning and lifelong learning to address this open-world scenario?
-	  </li>
+          <li>An autonomous vehicle may not recognize an overturned truck </li>
+          <li>A visual recognition system used in entertainment might not fairly recognize people of different races</li>
+          <li>A fashion recommendation system might not produce satisfactory recommendation results for "new-arrival" clothes.</li>
+          <li>An e-commerce system might not check new-products that are posted in reviews or uploaded for sale.</li>
         </ul>
       </div>
     </div>
 
+    <!-- Imapct -->
+    <p><a class="anchor" id="examples"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Impact</h2>
+        <p>Addressing novelties in open worlds have broad societal impacts. For example,
+        </p>
+        <ul>
+          <li>It improves the safety and robustness of vision systems, e.g., flagging an alert when seeing an unknown object in autonomous driving</li>
+          <li>It helps interdisciplinary research, e.g., discovering novel species of biological organisms
+          </li>
+          <li>It helps mitigate bias and promotes fairness in AI or machine learning applications, e.g., detecting and carefully handling underrepresented subpopulations rather than blindly making predictions about them.</li>
+        </ul>
+      </div>
+    </div>
 
-
+    <!-- Outcomes -->
+    <p><a class="anchor" id="examples"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Outcomes</h2>
+        <p>We expect that our workshop willL
+        </p>
+        <ul>
+          <li>offer new insights to the audience with respect to new challenges and opportunities when studying computer vision systems in the open-world  </li>
+          <li>give voice to the need for more attention to open-world paradigms and will continue the discussion, from previous such workshops/seminars, on the formalization of metrics and datasets in this space</li>
+          <li>provide a platform to exchange ideas among people that have different backgrounds and that come from different fields</li>
+          <li>bridge the gaps of academic research experiments and the requirements of real-world applications</li>
+          <li>explore mechanisms to measure competence at recognizing and dealing with novelty. This is especially important since the distribution of the test data (and presumably the evaluation date) will by definition, differ from the training data. This introduces challenges for evaluation as well as achieving competence.</li>
+        </ul>
+      </div>
+    </div>
 
     <hr>
     <!-- Speakers-->
@@ -191,10 +215,10 @@
     <br>
           <div class="instructor">
             <a href="https://www.vast.uccs.edu/~tboult" target="_blank">
-              <div class="instructorphoto"><img src="./Open World Vision_files/boult_01.jpg"></div>
-              <div>Terrance Boult</div>
+              <div class="instructorphoto"><img src="./Open World Vision_files/deva.jpg"></div>
+              <div>DEva Ramanan</div>
             </a>
-            <div class="instructor-institute">University of Colorado Colorado Springs</div>
+            <div class="instructor-institute">Carnegie Mellon University</div>
           </div>
 
           <div class="instructor">
@@ -317,51 +341,50 @@
     <div class="row">
       <div class="col-xs-12">
         <h2>Organizers</h2>
-    <p class="important">Please contact Shu Kong with any questions: shuk [at] andrew [dot] cmu [dot] edu</p>
+    <p class="important">Please contact Pulkit or Anubhav with any questions: pulkit [at] umd [dot] edu / anubhav [at] umd [dot] edu</p>
     <br>
         <div>
           <div class="instructor">
-            <a href="http://www.cs.cmu.edu/~shuk/" target="_blank">
+            <a href="https://www.cs.umd.edu/~pulkit/" target="_blank">
+              <div class="instructorphoto"><img src="./Open World Vision_files/pulkit.jpg"></div>
+              <div>Pulkit Kumar</div>
+            </a>
+	    <div class="instructor-institute">University of Maryland</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.linkedin.com/in/anubhav-5209729/" target="_blank">
+              <div class="instructorphoto"><img src="./Open World Vision_files/anubhav.jpg"></div>
+              <div>Anubhav</div>
+            </a>
+	    <div class="instructor-institute">University of Maryland</div><br>
+          </div>
+          <div class="instructor">
+            <a href="https://www.cs.cmu.edu/~shuk" target="_blank">
               <div class="instructorphoto"><img src="./Open World Vision_files/shu.jpg"></div>
               <div>Shu Kong</div>
             </a>
 	    <div class="instructor-institute">Carnegie Mellon University</div><br>
           </div>
           <div class="instructor">
-            <a href="http://www.cs.cmu.edu/~deva/" target="_blank">
-              <div class="instructorphoto"><img src="./Open World Vision_files/deva.jpg"></div>
-              <div>Deva Ramanan</div>
+            <a href="https://www.kitware.com/christopher-funk/" target="_blank">
+              <div class="instructorphoto"><img src="./Open World Vision_files/chris.jpg"></div>
+              <div>Christopher Funk</div>
             </a>
-            <div class="instructor-institute">Carnegie Mellon University</div><br>
+	    <div class="instructor-institute">Kitware</div><br>
           </div>
           <div class="instructor">
-            <a href="https://www.vast.uccs.edu/~tboult/" target="_blank">
-              <div class="instructorphoto"><img src="./Open World Vision_files/boult_01.jpg"></div>
+            <a href="https://vast.uccs.edu/~tboult/" target="_blank">
+              <div class="instructorphoto"><img src="./Open World Vision_files/terrance.jpg"></div>
               <div>Terrance Boult</div>
             </a>
-            <div class="instructor-institute">University of Colorado Colorado Springs</div>
+	    <div class="instructor-institute">University of Colorado, Colorado Spring</div><br>
           </div>
           <div class="instructor">
-            <a href="http://andrewowens.com/" target="_blank">
-              <div class="instructorphoto"><img src="./Open World Vision_files/Andrew_Owens.jpg"></div>
-              <div>Andrew Owens</div>
+            <a href="" target="_blank">
+              <div class="instructorphoto"><img src="./Open World Vision_files/bill.jpg"></div>
+              <div>Bill Ferguson</div>
             </a>
-            <div class="instructor-institute">University of Michigan</div><br>
-          </div>
-          <br>
-          <div class="instructor">
-            <a href="http://www.cs.columbia.edu/~vondrick/" target="_blank">
-              <div class="instructorphoto"><img src="./Open World Vision_files/photo-me.jpg"></div>
-              <div>Carl Vondrick</div>
-            </a>
-            <div class="instructor-institute">Columbia University</div><br>
-          </div>
-          <div class="instructor">
-            <a href="https://yxw.web.illinois.edu/" target="_blank">
-              <div class="instructorphoto"><img src="./Open World Vision_files/yuxiong.png"></div>
-              <div>Yu-Xiong Wang</div>
-            </a>
-            <div class="instructor-institute">University of Illinois at Urbana-Champaign</div>
+	    <div class="instructor-institute">Raytheon BBN Technologies</div><br>
           </div>
           <div class="instructor">
             <a href="http://www.cs.umd.edu/~abhinav/" target="_blank">
@@ -379,11 +402,11 @@
 
 
     <br><hr>
-    <!-- Important Dates -->
+    <!-- >Logistics and format -->
     <p><a class="anchor" id="dates"></a></p>
     <div class="row" style="margin-top:30px;">
       <div class="col-xs-12 col-sm-12">
-        <h2>Important Dates and Details</h2>
+        <h2>Logistics and format</h2>
         <ul>
           <li><b>Signup to receive updates</b>: using <a href="https://forms.gle/ni648J5iKPFva6vYA">this form</a></li>
           <!-- <li><b>Apply to be part of Program Committee by</b>: Feb 15, 2021</li> -->
